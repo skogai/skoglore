@@ -53,59 +53,55 @@ create_persona() {
   # Parse traits into an array
   IFS=',' read -r -a traits_array <<< "$traits"
 
-  # Create JSON structure
-  cat > "${PERSONAS_DIR}/${persona_id}.json" << EOF
-{
-  "id": "${persona_id}",
-  "name": "${name}",
-  "core_traits": {
-    "temperament": "balanced",
-    "values": [
-EOF
+  # Build the traits JSON array safely (handles embedded quotes/backslashes)
+  local values_json
+  values_json="$(printf '%s\n' "${traits_array[@]}" | jq -R . | jq -s .)"
 
-  # Add traits
-  for ((i=0; i<${#traits_array[@]}; i++)); do
-    if [ $i -eq $((${#traits_array[@]}-1)) ]; then
-      echo "      \"${traits_array[$i]}\"" >> "${PERSONAS_DIR}/${persona_id}.json"
-    else
-      echo "      \"${traits_array[$i]}\"," >> "${PERSONAS_DIR}/${persona_id}.json"
-    fi
-  done
-
-  # Continue with the rest of the JSON
-  cat >> "${PERSONAS_DIR}/${persona_id}.json" << EOF
-    ],
-    "motivations": []
-  },
-  "voice": {
-    "tone": "${voice}",
-    "patterns": [],
-    "vocabulary": "standard"
-  },
-  "background": {
-    "origin": "",
-    "significant_events": [],
-    "connections": []
-  },
-  "knowledge": {
-    "expertise": [],
-    "limitations": [],
-    "lore_books": []
-  },
-  "interaction_style": {
-    "formality": "neutral",
-    "humor": "occasional",
-    "directness": "balanced",
-    "special_instructions": ""
-  },
-  "meta": {
-    "version": "1.0",
-    "created": "${timestamp}",
-    "modified": "${timestamp}",
-    "tags": []
-  }
-}
-EOF
+  # Build JSON structure with jq --arg so no field value can break the
+  # document, regardless of quotes/backslashes/newlines it contains
+  # (e.g. LLM-generated voice descriptions).
+  jq -n \
+    --arg id "$persona_id" \
+    --arg name "$name" \
+    --arg voice "$voice" \
+    --arg timestamp "$timestamp" \
+    --argjson values "$values_json" \
+    '{
+      id: $id,
+      name: $name,
+      core_traits: {
+        temperament: "balanced",
+        values: $values,
+        motivations: []
+      },
+      voice: {
+        tone: $voice,
+        patterns: [],
+        vocabulary: "standard"
+      },
+      background: {
+        origin: "",
+        significant_events: [],
+        connections: []
+      },
+      knowledge: {
+        expertise: [],
+        limitations: [],
+        lore_books: []
+      },
+      interaction_style: {
+        formality: "neutral",
+        humor: "occasional",
+        directness: "balanced",
+        special_instructions: ""
+      },
+      meta: {
+        version: "1.0",
+        created: $timestamp,
+        modified: $timestamp,
+        tags: []
+      }
+    }' > "${PERSONAS_DIR}/${persona_id}.json"
 
   echo "Created persona: ${persona_id}"
   echo "Edit the file at: ${PERSONAS_DIR}/${persona_id}.json to add more details"
