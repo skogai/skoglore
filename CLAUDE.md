@@ -68,7 +68,7 @@ COMMANDS:
   link-to-persona      🔮 Link book to persona yao [aliases: link_to_persona]
 
 ENVIRONMENTS:
-  SKOGAI_DIR    path to yo skogai-folder! [default: /home/skogix/]
+  SKOGAI_DIR    path to yo skogai-folder! [default: /home/skogix/skogai]
   LORE_SCRIPTS  path to yo skogai-folder! [default: /home/skogix/lore/tools]
   LORE_DIR      path to yo lore! [default: /home/skogix/lore/knowledge/expanded/lore]
   BOOKS_DIR     path to yo books! [default: /home/skogix/lore/knowledge/expanded/lore/books]
@@ -184,22 +184,35 @@ Tool: `tools/context-manager.sh` (create, update, archive sessions)
 
 ### Numbered Knowledge System
 
-Core knowledge files in `knowledge/` organized by ID range: 00-09 Core, 10-19 Navigation, 20-29 Identity, 30-99 Operational, 100-199 Standards, 200-299 Project, 300-399 Tools. Index: `knowledge/INDEX.md`
+Core knowledge files in `knowledge/` organized by ID range: `00-09` Core, `10-89` Expanded, `90-99` Implementation. Index: `knowledge/INDEX.md`. Historical entries (834 entries, 19 books, 41 personas) live in `knowledge/archived/` — never delete these (see manifest at `knowledge/archived/CLEANUP_MANIFEST.json`).
+
+### Queue Systems
+
+Two separate queue mechanisms exist — don't conflate them:
+
+- **`.lore-queue/`** — flat JSON files, driven by `argc queue-add/queue-list/queue-process/queue-clear` (see Quick Start above). This is the active queue for CLI-driven generation.
+- **`queue/{pending,processing,completed,failed}/`** — older batch system driven by `tools/queue-task.sh` and `tools/process-queue.sh`, documented in `docs/QUEUE_SYSTEM.md`.
 
 ## Directory Structure
 
 ```
 agents/api/          # DEPRECATED (use shell tools)
 context/             # Session contexts (current/, archive/, templates/)
+docs/                # CONCEPT, ARCHITECTURE, SYSTEM_MAP, api/*
 integration/         # lore-flow.sh pipeline, persona-bridge
 knowledge/
   ├── core/          # JSON schemas (entry, book, persona)
-  └── expanded/      # Generated data
-      ├── lore/{entries,books}/
-      └── personas/
+  ├── expanded/      # Generated data
+  │   ├── lore/{entries,books}/
+  │   └── personas/
+  └── archived/      # Historical preservation — NEVER delete
 orchestrator/        # Session preparation and knowledge loading
+queue/               # Legacy batch queue (see Queue Systems above)
 scripts/pre-commit/  # Validation hooks
+tests/               # Shell test suite
 tools/               # Shell scripts (PRIMARY interface)
+.claude/skills/      # Project skills (skogai-jq, skogai-argc, lore-from-git, lore-creation)
+.github/workflows/   # CI automation (auto-doc updates, growth stats)
 .skogai/             # Plugin garden, planning, todos
 ```
 
@@ -212,6 +225,8 @@ tools/               # Shell scripts (PRIMARY interface)
 - **[System Map](docs/SYSTEM_MAP.md)** - Architecture and component relationships
 - **[Generation Tools](docs/api/generation-tools.md)** - Complete tool reference
 - **[Architecture](docs/ARCHITECTURE.md)** - Technical architecture overview
+- **[AGENTS.md](AGENTS.md)** - Secondary quick-reference: directory diagram + "where to look" table
+- **`.claude/skills/`** - Project skills: `skogai-jq`, `skogai-argc`, `lore-from-git`, `lore-creation-starting-skill`
 - **[Entry API](docs/api/entry.md)** | **[Book API](docs/api/book.md)** | **[Persona API](docs/api/persona.md)**
 
 ## Code Style

@@ -9,7 +9,7 @@ set -e
 # @meta man-section 1
 
 # 🌟 Ancient Mystical Variables
-# @env SKOGAI_DIR=/home/skogix/ path to yo skogai-folder!
+# @env SKOGAI_DIR=/home/skogix/skogai path to yo skogai-folder!
 # @env LORE_SCRIPTS=/home/skogix/lore/tools path to yo skogai-folder!
 # @env LORE_DIR=/home/skogix/lore/knowledge/expanded/lore path to yo lore!
 # @env BOOKS_DIR=/home/skogix/lore/knowledge/expanded/lore/books path to yo books!
@@ -181,7 +181,7 @@ _choice_categories() { echo -e "character\nplace\nevent\nobject\nconcept\ncustom
 # Document file discovery - finds markdown files for lore generation
 _choice_doc_files() {
   find "${MYSTICAL_SANCTUM}/docs" "${MYSTICAL_SANCTUM}/knowledge" \
-    -type f -name "*.md" 2>/dev/null | \
+    -type f -name "*.md" 2>/dev/null |
     sed "s|^${MYSTICAL_SANCTUM}/||" | sort
 }
 
@@ -189,7 +189,7 @@ _choice_doc_files() {
 _choice_doc_dirs() {
   find "${MYSTICAL_SANCTUM}" -maxdepth 3 -type d \
     -exec sh -c 'ls "$1"/*.md >/dev/null 2>&1' _ {} \; \
-    -print 2>/dev/null | \
+    -print 2>/dev/null |
     sed "s|^${MYSTICAL_SANCTUM}/||" | sort
 }
 
@@ -245,15 +245,24 @@ _validate_path() {
   [[ "$path" != /* ]] && path="${MYSTICAL_SANCTUM}/$path"
 
   case "$type" in
-    file)
-      [[ -f "$path" ]] || { echo "ERROR: File not found: $path" >&2; return 1; }
-      ;;
-    dir)
-      [[ -d "$path" ]] || { echo "ERROR: Directory not found: $path" >&2; return 1; }
-      ;;
-    any)
-      [[ -e "$path" ]] || { echo "ERROR: Path not found: $path" >&2; return 1; }
-      ;;
+  file)
+    [[ -f "$path" ]] || {
+      echo "ERROR: File not found: $path" >&2
+      return 1
+    }
+    ;;
+  dir)
+    [[ -d "$path" ]] || {
+      echo "ERROR: Directory not found: $path" >&2
+      return 1
+    }
+    ;;
+  any)
+    [[ -e "$path" ]] || {
+      echo "ERROR: Path not found: $path" >&2
+      return 1
+    }
+    ;;
   esac
 
   echo "$path"
@@ -289,8 +298,8 @@ _validate_lore_output() {
   local errors=()
 
   # Check for meta-commentary (LLM preambles)
-  if echo "$content" | head -n 1 | \
-     grep -qiE '^[[:space:]]*(I will|Let me|Here is|This entry|I need|should I|First,? I|Certainly|Of course)'; then
+  if echo "$content" | head -n 1 |
+    grep -qiE '^[[:space:]]*(I will|Let me|Here is|This entry|I need|should I|First,? I|Certainly|Of course)'; then
     errors+=("Contains meta-commentary in first line")
   fi
 
@@ -313,8 +322,8 @@ _validate_lore_output() {
 _strip_meta_commentary() {
   local content="$1"
 
-  if echo "$content" | head -n 1 | \
-     grep -qiE '^[[:space:]]*(I will|Let me|Here is|This entry|I need|should I|First,? I|Certainly|Of course)'; then
+  if echo "$content" | head -n 1 |
+    grep -qiE '^[[:space:]]*(I will|Let me|Here is|This entry|I need|should I|First,? I|Certainly|Of course)'; then
     echo "$content" | tail -n +2
   else
     echo "$content"
@@ -416,7 +425,7 @@ _generate_lore_entry() {
   if [[ -x "${LORE_SCRIPTS}/llama-lore-integrator.sh" ]]; then
     local temp_file
     temp_file=$(mktemp)
-    echo "$content" > "$temp_file"
+    echo "$content" >"$temp_file"
     lore_content=$("${LORE_SCRIPTS}/llama-lore-integrator.sh" \
       "${LLM_MODEL:-llama3.2}" extract-lore "$temp_file" lore 2>/dev/null) || lore_content=""
     rm -f "$temp_file"
@@ -457,7 +466,7 @@ _generate_lore_entry() {
         canonical: true
       },
       visibility: { public: true, restricted_to: [] }
-    }' > "${ENTRIES_DIR}/${entry_id}.json"
+    }' >"${ENTRIES_DIR}/${entry_id}.json"
 
   echo "Created: $entry_id"
 
@@ -507,7 +516,7 @@ queue-add() {
       priority: $priority,
       created_at: $created,
       status: "pending"
-    }' > "${QUEUE_DIR}/${queue_id}.json"
+    }' >"${QUEUE_DIR}/${queue_id}.json"
 
   echo "Queued: $queue_id (${argc_type}: ${argc_input})"
 }
@@ -517,7 +526,10 @@ queue-add() {
 # @option --format[=table|json]                       Output format
 # @alias q-list
 queue-list() {
-  [[ ! -d "$QUEUE_DIR" ]] && { echo "Queue empty" >&2; return 0; }
+  [[ ! -d "$QUEUE_DIR" ]] && {
+    echo "Queue empty" >&2
+    return 0
+  }
 
   local found=0
   for item in "${QUEUE_DIR}"/*.json; do
@@ -553,7 +565,10 @@ queue-list() {
 # @option --limit=1 <N>                               Number of items to process
 # @alias q-process
 queue-process() {
-  [[ ! -d "$QUEUE_DIR" ]] && { echo "Queue empty" >&2; return 0; }
+  [[ ! -d "$QUEUE_DIR" ]] && {
+    echo "Queue empty" >&2
+    return 0
+  }
 
   local limit="${argc_limit:-1}"
   [[ -n "$argc_all" ]] && limit=9999
@@ -579,7 +594,10 @@ queue-process() {
 # @option --status[`_choice_queue_statuses`]          Only clear items with this status
 # @alias q-clear
 queue-clear() {
-  [[ ! -d "$QUEUE_DIR" ]] && { echo "Queue empty" >&2; return 0; }
+  [[ ! -d "$QUEUE_DIR" ]] && {
+    echo "Queue empty" >&2
+    return 0
+  }
 
   local count
   count=$(ls -1 "${QUEUE_DIR}"/*.json 2>/dev/null | wc -l | tr -d ' ')
@@ -617,26 +635,26 @@ _process_queue_item() {
 
   echo "Processing: $id ($type)" >&2
 
-  jq '.status = "processing"' "$item_file" > "${item_file}.tmp"
+  jq '.status = "processing"' "$item_file" >"${item_file}.tmp"
   mv "${item_file}.tmp" "$item_file"
 
   local result=0
   case "$type" in
-    doc)
-      argc_path="$input" argc_category="$category" argc_dry_run="" generate-from-docs || result=1
-      ;;
-    git)
-      argc_commit="$input" argc_category="$category" argc_dry_run="" generate-from-git || result=1
-      ;;
-    manual)
-      echo "$input" | argc_title="Queued Entry $(date +%s)" argc_category="$category" argc_dry_run="" generate-from-stdin || result=1
-      ;;
+  doc)
+    argc_path="$input" argc_category="$category" argc_dry_run="" generate-from-docs || result=1
+    ;;
+  git)
+    argc_commit="$input" argc_category="$category" argc_dry_run="" generate-from-git || result=1
+    ;;
+  manual)
+    echo "$input" | argc_title="Queued Entry $(date +%s)" argc_category="$category" argc_dry_run="" generate-from-stdin || result=1
+    ;;
   esac
 
   if [[ $result -eq 0 ]]; then
-    jq '.status = "done"' "$item_file" > "${item_file}.tmp"
+    jq '.status = "done"' "$item_file" >"${item_file}.tmp"
   else
-    jq '.status = "failed"' "$item_file" > "${item_file}.tmp"
+    jq '.status = "failed"' "$item_file" >"${item_file}.tmp"
   fi
   mv "${item_file}.tmp" "$item_file"
 }
@@ -655,7 +673,7 @@ create-entry() {
     --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
     --arg creator "$(whoami)" \
     --null-input \
-    > "${ENTRIES_DIR}/${entry_id}.json" && echo "Created: ${entry_id}" >>"$LLM_OUTPUT"
+    >"${ENTRIES_DIR}/${entry_id}.json" && echo "Created: ${entry_id}" >>"$LLM_OUTPUT"
 }
 
 # 📖 Chronicle inscriptions
@@ -672,7 +690,7 @@ create-book() {
     --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
     --arg creator "$(whoami)" \
     --null-input \
-    > "${BOOKS_DIR}/${book_id}.json" && echo "Created: ${book_id}" >>"$LLM_OUTPUT"
+    >"${BOOKS_DIR}/${book_id}.json" && echo "Created: ${book_id}" >>"$LLM_OUTPUT"
 }
 
 # 📖 Chronicle inscriptions
@@ -688,7 +706,7 @@ create-persona() {
     --arg voice_tone "$argc_voice_tone" \
     --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
     --null-input \
-    > "${PERSONA_DIR}/${persona_id}.json" && echo "Created: ${persona_id}" >>"$LLM_OUTPUT"
+    >"${PERSONA_DIR}/${persona_id}.json" && echo "Created: ${persona_id}" >>"$LLM_OUTPUT"
 }
 
 # 📖 Chronicle inscriptions
