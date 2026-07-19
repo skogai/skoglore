@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443197_b0a8bb35",
+  "title": "The Twin Queues",
+  "content": "The Twin Queues stand at the threshold between intention and creation, two vessels that look alike to the untrained eye yet answer to different names and different laws. One is young and swift — a scatter of flat scrolls kept in `.lore-queue/`, summoned and dismissed by a single tongue: `queue-add`, `queue-list`, `queue-process`, `queue-clear`. It knows no ceremony beyond the argc invocation, no state but present and gone. The other is elder and slow, a four-chambered hall — `pending`, `processing`, `completed`, `failed` — where nothing vanishes, only moves rooms, tended by older hands through `tools/queue-task.sh` and `tools/process-queue.sh`. Both were built to hold work waiting to become lore, but they do not share a floor, a script, or a memory.\n\nLegend tells of lore-keepers who reached for `queue-clear` believing they had emptied the hall, only to find the pending chamber still full — or who searched the flat scrolls for a task that had been sitting, patient, in `processing` all along. The confusion was never the queues' fault. It was the keeper's, for treating twins as if they were one creature wearing two names.\n\nBefore you invoke any queue command, ask first which realm you stand in — the swift scrolls or the four-chambered hall — for the same word \"queue\" opens two different doors, and only one of them leads where you meant to go.",
+  "summary": "Two unrelated queue mechanisms exist (.lore-queue/ flat JSON via argc, and queue/{pending,processing,completed,failed}/ via tools/queue-task.sh) — conflating them is a documented gotcha the lore-keeper must avoid when triaging generation requests.",
+  "category": "object",
+  "tags": [
+    "lore-keeper",
+    "object"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:39:57Z",
+    "updated_at": "2026-07-19T06:39:57Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

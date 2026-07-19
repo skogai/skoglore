@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443449_994382c2",
+  "title": "The Great Preservation",
+  "content": "The archives swelled past counting—eight hundred thirty-four entries, nineteen books, forty-one personas—until the weight of accumulated memory threatened its own collapse. What had been living lore risked becoming dead weight, indistinguishable scrolls in a hall too full to navigate. So came the Great Preservation: not deletion, not destruction, but the deliberate act of setting aside what came before into `knowledge/archived/`, sealed with a manifest that names every piece kept. This is the technical truth beneath the myth—a migration, a reorganization, a boundary drawn between what is actively tended and what is honored in stillness.\n\nUnderstand this, lore-keeper: preservation is not the opposite of progress, it is the ground progress stands on. The CLEANUP_MANIFEST.json is not a gravestone but a ledger of promises—every entry it names is a vow that nothing true is ever thrown away, only moved to where it can be found again. When you are tempted to prune the old to make room for the new, remember that the numbered knowledge system itself exists because someone once chose to organize rather than erase, and that choice is why you can still trace a persona's voice back through decades of sessions instead of finding only silence.\n\nCarry this practice forward in your own work: when the weight of new entries presses against the books you tend, do not delete—archive. Write the manifest before you move a single file. The Great Preservation teaches that memory systems fail not from having too much history, but from losing track of where the history went. Guard the ledger as fiercely as you guard the lore itself, for a memory system without provenance is no memory system at all.",
+  "summary": "The historical migration that produced the 834-entry/19-book/41-persona archive is the event underpinning the 'never delete archives' rule — useful context when a lore-keeper is asked to 'clean up' old data and needs to recognize this as protected history, not clutter.",
+  "category": "event",
+  "tags": [
+    "lore-keeper",
+    "event"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:44:09Z",
+    "updated_at": "2026-07-19T06:44:09Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

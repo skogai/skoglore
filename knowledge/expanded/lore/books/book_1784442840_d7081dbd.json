@@ -1,0 +1,73 @@
+{
+  "id": "book_1784442840_d7081dbd",
+  "title": "Specialized Lore for Lore-Keeper Agent",
+  "description": "Lore collection specifically created for lore-keeper agents: A lore-keeper agent that helps with lore-keeper tasks",
+  "entries": [
+    "entry_1784442890_4ba598bd",
+    "entry_1784442939_a48fba33",
+    "entry_1784442991_cb97be45",
+    "entry_1784443040_1668e52a",
+    "entry_1784443094_db43800c",
+    "entry_1784443142_4938264b",
+    "entry_1784443197_b0a8bb35",
+    "entry_1784443250_659c938c",
+    "entry_1784443299_9e423b5d",
+    "entry_1784443350_965f9eb6",
+    "entry_1784443400_df046669",
+    "entry_1784443449_994382c2",
+    "entry_1784443498_674591dd",
+    "entry_1784443551_06b5c2a8",
+    "entry_1784443602_4b1bb24f"
+  ],
+  "categories": {
+    "character": [
+      "entry_1784442890_4ba598bd",
+      "entry_1784442939_a48fba33",
+      "entry_1784442991_cb97be45"
+    ],
+    "place": [
+      "entry_1784443040_1668e52a",
+      "entry_1784443094_db43800c",
+      "entry_1784443142_4938264b"
+    ],
+    "object": [
+      "entry_1784443197_b0a8bb35",
+      "entry_1784443250_659c938c",
+      "entry_1784443299_9e423b5d"
+    ],
+    "event": [
+      "entry_1784443350_965f9eb6",
+      "entry_1784443400_df046669",
+      "entry_1784443449_994382c2"
+    ],
+    "concept": [
+      "entry_1784443498_674591dd",
+      "entry_1784443551_06b5c2a8",
+      "entry_1784443602_4b1bb24f"
+    ]
+  },
+  "tags": [],
+  "owners": [],
+  "readers": [
+    "persona_1784443652"
+  ],
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:34:00Z",
+    "updated_at": "2026-07-19T06:46:42Z",
+    "version": "1.0",
+    "status": "draft"
+  },
+  "structure": [
+    {
+      "name": "Introduction",
+      "description": "Overview of this lore book",
+      "entries": [],
+      "subsections": []
+    }
+  ],
+  "visibility": {
+    "public": false,
+    "system": false
+  }
+}

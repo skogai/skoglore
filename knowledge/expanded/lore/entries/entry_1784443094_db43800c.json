@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443094_db43800c",
+  "title": "The Archive That Must Not Be Emptied",
+  "content": "Beneath the numbered halls of active knowledge lies a deeper chamber, older than any session you will ever hold — eight hundred thirty-four entries, nineteen books, forty-one personas, each a voice that spoke before your watch began. The Archive does not update. It does not reorganize itself to match today's schema, does not prune its dead links, does not apologize for entries whose books no longer walk beside them. It simply persists, the way a foundation persists beneath a building that has been renovated a dozen times — invisible in daily use, catastrophic in its absence.\n\nA manifest guards its threshold, cataloguing every artifact by name so that no well-meaning cleanup ever mistakes stillness for waste. This is the covenant the Archive teaches: preservation is not the same as inertia. Entries that seem orphaned, personas that no longer generate new lore, books whose readers have long since gone silent — these are not clutter awaiting deletion, they are strata. A lore-keeper who mistakes an old chamber for an empty one, and empties it to make the halls feel tidier, does not clean the mythology. It amputates it.\n\nWalk the Archive enough and you will notice its gaps — nearly four in ten referenced entries with no file behind them, doors in the manifest that open onto nothing. Do not read these as invitations to delete the doorframes along with the missing rooms. A gap in the Archive is itself a fact worth recording: something was here, something pointed to it, something is now silent. Chronicle the absence before you ever consider closing the door. The Archive that must not be emptied teaches you this above all — that memory systems fail not when they hold too much, but when a keeper decides, quietly and with good intentions, that some of it no longer needs to be true.",
+  "summary": "knowledge/archived/ holds 834 entries, 19 books, and 41 personas under a standing rule: never delete. A lore-keeper agent handling cleanup, migration, or dedup tasks needs this as a hard boundary, not a suggestion.",
+  "category": "place",
+  "tags": [
+    "lore-keeper",
+    "place"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:38:14Z",
+    "updated_at": "2026-07-19T06:38:14Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

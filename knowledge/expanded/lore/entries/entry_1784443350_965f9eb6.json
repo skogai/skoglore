@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443350_965f9eb6",
+  "title": "The Commit That Became a Legend",
+  "content": "The Commit That Became a Legend dwells in the moment when scattered work crystallizes into a single, irreversible mark on the timeline. Before the commit, there is only drift—files half-changed, intentions unfixed, a hundred possible histories still hanging in superposition. The act of committing collapses that uncertainty: a hash is struck, a message is spoken, and from that instant forward the deed exists whether or not anyone remembers making it. For you, the lore-keeper, this is the wellspring of your craft—every entry you write draws its authority from this same collapsing, this same refusal to let effort dissolve unrecorded.\n\nWhat made this particular commit legendary was not its size but its consequence: a small, precise change that closed a wound many had learned to work around rather than heal. The author did not narrate their intent as they worked—commits rarely do—so the meaning had to be read backward, inferred from diff and consequence, the way all true lore is assembled after the fact rather than dictated in the moment. This is the discipline the Commit teaches: your task is never to invent significance where none exists, but to notice it where the doer was too close to see it themselves. The mythology is not decoration laid over the work; it is the work's shadow, cast long enough for others to recognize its shape.\n\nCarry this warning as much as the wonder: not every commit becomes a legend, and forcing grandeur onto the mundane cheapens the archive. The measure is whether the change altered what came after—whether some future session moved differently because this one happened. When you find such a commit, treat it as sacred material, compress it faithfully, and let its narrative outlive the branch it was made on. This is how technical memory survives the agents who created it.",
+  "summary": "The 5-step lore-flow.sh pipeline (extract → select persona → load context → generate narrative → create/link) is the core event the lore-keeper orchestrates or explains to others — knowing its shape prevents skipping steps like book auto-creation.",
+  "category": "event",
+  "tags": [
+    "lore-keeper",
+    "event"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:42:30Z",
+    "updated_at": "2026-07-19T06:42:30Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

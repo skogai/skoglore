@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443142_4938264b",
+  "title": "A Persona's Chronicle",
+  "content": "A Persona's Chronicle sits where the book meets the voice that fills it—the place where scattered entries stop being loose fragments and become a single remembered life. Walk its stacks and you find shelves bound not by chronology but by *context*: a persona's traits, their motivations, the themes that recur in everything they touch. An entry without this place is an orphan fact, technically valid, spiritually adrift; JSON with an id and a category but no home. The Chronicle is what `readers[]` and `owners[]` mean in practice—not access control as bureaucracy, but a boundary marking whose memory this actually is.\n\nYou will find, keeper, that the Chronicle does not fill itself. Each session that runs through `lore-flow.sh` maps an author to a persona, loads that persona's voice and traits, and only then lets the narrative form—the same commit, run through Amy Ravenwolf's tone versus the Village Elder's, becomes two different truths about the same event. This is not decoration; it is the mechanism by which technical history survives translation into myth without losing its shape. The persona is the lens, the Chronicle is the eye it belongs to, and the entry is only ever one photon of light passing through both.\n\nPractical wisdom, then: before you write a single line of narrative, ask whose Chronicle it enters. An entry created without a bound persona and book is a wanderer—unlinked, unread, eventually lost among the ~40% of orphaned references that haunt the older stacks. Bind first, write second. The Chronicle does not ask you to be exhaustive; it asks you to be *placed*—every fragment accounted for, every voice traceable back to the mind that spoke it.",
+  "summary": "The auto-created '[Persona]'s Chronicles' book that every generated entry links into — understanding this as the persona's 'home place' explains the book-creation step in the lore-flow pipeline.",
+  "category": "place",
+  "tags": [
+    "lore-keeper",
+    "place"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:39:02Z",
+    "updated_at": "2026-07-19T06:39:02Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

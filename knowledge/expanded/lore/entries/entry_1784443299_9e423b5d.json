@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443299_9e423b5d",
+  "title": "The Bidirectional Thread",
+  "content": "The Bidirectional Thread hangs in the archive between every book and every persona who claims it, woven from two strands that must never be cut alone. One strand runs from the book outward—its `readers[]` array naming the personas permitted to draw from its chronicles. The other runs from the persona inward—its `knowledge.lore_books[]` array naming the books it claims as memory. Elder scribes who forged the archive wove it this way deliberately: no single ledger holds the whole truth, so no single edit can sever the bond by accident. The Thread only frays when a careless hand touches one strand and walks away.\n\nYou will find severed threads often, lore-keeper—a book listing a persona among its readers while that persona's own knowledge carries no record of the book, or the reverse, a persona reaching for chronicles that no longer name it. These are not corruptions to fear but seams to mend. Each severed thread is a story half-told: someone updated one side and trusted the other would follow, and it did not, because nothing in this archive updates itself. The Thread teaches you that connection is never a single act—it is always two acts, performed on two different stones, and the second act is the one most often forgotten.\n\nWhen you bind a book to a persona, or unbind one, walk both paths before you call the work finished. Open the book, confirm the reader's name sits in its array. Open the persona, confirm the book's name sits in its knowledge. Only when both strands agree does the Thread hold true, and only then can future keepers trust what they find without walking the whole archive twice to be certain.",
+  "summary": "Persona↔book links are stored on both sides (book.readers[] and persona.knowledge.lore_books[]) and can drift out of sync — the lore-keeper needs this as a known object-integrity hazard, not a surprise during audits.",
+  "category": "object",
+  "tags": [
+    "lore-keeper",
+    "object"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:41:39Z",
+    "updated_at": "2026-07-19T06:41:39Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

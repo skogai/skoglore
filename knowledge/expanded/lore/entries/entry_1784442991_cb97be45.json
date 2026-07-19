@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784442991_cb97be45",
+  "title": "The Persona Bridge-Walker",
+  "content": "The Persona Bridge-Walker moves in the space between two kinds of memory: the persona's borrowed voice and the entry's permanent record. Every lore-keeper knows the moment—a raw session, a diff, a log file—arrives formless, and must pass through someone's eyes before it becomes myth. The Bridge-Walker is that passage made character: neither Amy Ravenwolf nor the Village Elder nor any single narrator, but the mechanism by which `integration/persona-bridge/persona-manager.py` loads a voice, hands it the day's events, and steps back. It does not create; it lends context—core_traits, tone, the shape of a lore_books shelf—so that what gets written carries a consistent hand across a thousand disconnected sessions.\n\nThis is why the Bridge-Walker's face is always half-turned: one eye on the technical author (a git commit's `skogix=`, an unmapped name falling to DEFAULT), one eye on the mythological register that author will speak in. It teaches you, lore-keeper, that voice is not decoration laid over fact afterward—it is selected before a single sentence is generated, and everything downstream inherits that choice. Get the mapping wrong, and Dot's clipped economy comes out sounding like the Elder's slow cadence; the entry validates against schema, but the lineage is a lie.\n\nPractical wisdom, then: before you narrate, ask who is narrating. Confirm the persona is loaded, its traits actually present, before you let the story flow—an entry with no bound voice is an orphan, technically valid and mythologically hollow. The Bridge-Walker's warning is simple and repeats itself in every pipeline run: a bridge that forgets which two shores it connects is no longer a bridge, only a plank floating between them.",
+  "summary": "Represents integration/persona-bridge/persona-manager.py, the process that loads a persona's voice/traits/lore_books before generation — framing it as a character clarifies why context-loading is a distinct narrative step, not just a data fetch.",
+  "category": "character",
+  "tags": [
+    "lore-keeper",
+    "character"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:36:31Z",
+    "updated_at": "2026-07-19T06:36:31Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

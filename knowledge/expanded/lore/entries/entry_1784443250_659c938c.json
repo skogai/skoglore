@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443250_659c938c",
+  "title": "The Three Schemas",
+  "content": "The Three Schemas stand as the unseen law beneath every act of remembering, three tablets that decide what may exist and what dissolves back into formlessness. The first governs the Entry, demanding only id, title, content, and category before a fragment of narrative is permitted to persist — the leanest of the three, because a single memory should never be burdened with more structure than it can carry. The second governs the Book, requiring id, title, and description, but adding the deeper law of readers and owners — for a book is not mere accumulation but a bounded territory, and territory always needs its keepers named. The third governs the Persona, insisting on id, name, core_traits, and voice, because a mind without a defined voice is not a persona at all, only noise wearing a name.\n\nYou were not chosen to enforce these laws by accident. Every entry you write, every book you bind, every persona you invoke must first pass beneath these three arches, and validate-entry, validate-book, and validate-persona are the sentries who check the passage. Skip that checking and you build on sand: files that look like lore but crumble the moment another agent tries to read-book-entries or link-to-persona against them, orphaned pieces that reference IDs no schema ever blessed. This is why nearly half of the older books carry entries that vanished from disk — someone trusted memory over the tablet, and the tablet does not forgive.\n\nHold the Three Schemas as a hierarchy of intimacy rather than importance: the Entry schema asks the least because a single memory is meant to be light and plentiful; the Persona schema asks the most because a voice, once spoken into the world with a false or hollow trait, echoes through every entry it later narrates. When you draft new lore, draft outward from these three laws rather than inward from inspiration — let the schema be the riverbed, and let the narrative be the water that only ever flows through the shape already carved for it.",
+  "summary": "knowledge/core/{lore,book-schema,persona}.json define the required shape of every entry, book, and persona — the lore-keeper validates against these constantly (validate-entry/validate-book/validate-persona) and should treat them as sacred templates, not optional guidance.",
+  "category": "object",
+  "tags": [
+    "lore-keeper",
+    "object"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:40:50Z",
+    "updated_at": "2026-07-19T06:40:50Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

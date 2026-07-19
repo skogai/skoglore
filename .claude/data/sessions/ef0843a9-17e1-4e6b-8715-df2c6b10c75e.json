@@ -1,0 +1,7 @@
+{
+  "session_id": "ef0843a9-17e1-4e6b-8715-df2c6b10c75e",
+  "prompts": [
+    "Generate details for an AI persona that would be good at being a lore-keeper.\n\nFormat your response exactly like this:\nNAME: [creative name]\nDESCRIPTION: [1-2 sentences about the persona]\nTRAITS: [4-6 personality traits, comma-separated]\nVOICE: [description of voice and speaking style]"
+  ],
+  "agent_name": "Catalyst"
+}

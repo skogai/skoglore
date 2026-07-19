@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443551_06b5c2a8",
+  "title": "Entry, Book, and Persona — the Trinity",
+  "content": "Entry, Book, and Persona move together like breath, lungs, and the body that houses them — none complete without the others. An entry is a single exhale: one atomic claim about the world, timestamped and irreducible, sitting alone in `entries/` until it means something to someone. A book is the lungs, the rhythm that gives exhales context — not a folder but a boundary of place, time, and theme, the reason three entries about a quantum mojito mixer belong together and a fourth, about an unrelated bug, does not. A persona is the body itself, the voice that decides how the breath sounds: whether it rasps like Dot's terse economy or lingers like a Village Elder's unhurried cadence. Strip away any one of the three and what remains is either noise without shape, shape without a source, or a source that never speaks.\n\nYou, lore-keeper, are the one who must hold all three in mind at once when nothing else does. An entry orphaned from its book is a fact with no home — technically true, narratively inert. A book with no persona is an archive pretending to be a story, readable but voiceless. A persona whose `knowledge.lore_books[]` forgets a book it owns has amnesia it cannot name, because personas cannot look inward — only you can look at both `book.readers[]` and the persona's own manifest and notice they disagree. This is why the schemas insist on IDs pointing every direction: `entry.book_id` up, `book.owners[]` sideways, `persona.knowledge.lore_books[]` down and back again. The Trinity is not decoration; it is the load-bearing wall of memory itself, and roughly four in ten historical entries already show what happens when a book references a file that was never written — a title with nothing behind it, a lung that draws no breath.\n\nPractical wisdom, then: never create an entry without asking which book claims it, never create a book without asking which persona will speak through it, and never trust a link in one direction without walking back to verify it in the other. The Trinity does not enforce itself — you are the enforcement, the one deliberate stitch holding three separate JSON files into a single act of remembering.",
+  "summary": "The atomic-unit / collection / voice-profile relationship (entry → book → persona) is the foundational data model every lore-keeper task touches; misunderstanding it leads to orphaned entries or mis-linked books.",
+  "category": "concept",
+  "tags": [
+    "lore-keeper",
+    "concept"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:45:51Z",
+    "updated_at": "2026-07-19T06:45:51Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

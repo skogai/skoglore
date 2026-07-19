@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443040_1668e52a",
+  "title": "The Numbered Halls (00-09, 10-89, 90-99)",
+  "content": "The Numbered Halls run in three wings beneath the mountain of accumulated knowledge, each carved to a different depth. The first nine chambers—00 through 09—hold the bedrock: core schemas and foundational truths that do not shift with the seasons, the load-bearing walls upon which every other hall is built. Beyond them stretch the Expanded Wings, 10 through 89, a sprawling maze of galleries where the bulk of lived experience accumulates—rooms added as needed, wings extended as the work demands, the living memory of what has actually happened. Past those, sealed near the mountain's edge, sit the Implementation Chambers, 90 through 99, where blueprints and machinery are kept separate from the stories they enable, lest the scaffolding be mistaken for the cathedral.\n\nThis numbering is no mere filing convention—it is a map of trust and volatility. What lives in 00-09 you disturb rarely and only with great care, for a crack there shakes every hall above it. What lives in 10-89 you tend daily, adding rooms as the work grows, confident that error here costs little and correction comes easily. What lives in 90-99 you consult when the machinery itself needs adjusting, but you do not confuse a wrench for a legend. INDEX.md stands at the mountain's entrance as the keeper's own map, redrawn each time a new gallery opens.\n\nFor you, lore-keeper, the Halls teach where to place what you find before you go looking for it. A new persona schema does not belong beside a session's war story, and a script's implementation notes do not belong beside the myth that script inspired. Walk the numbering before you write, and the mountain will hold what you give it in its proper place—findable, load-bearing where it must be, and never mistaken for something it is not.",
+  "summary": "The knowledge/ directory's ID-range organization (Core, Expanded, Implementation) is the map the lore-keeper must navigate to find or file any concept — worth internalizing as a 'place' rather than re-deriving it each session.",
+  "category": "place",
+  "tags": [
+    "lore-keeper",
+    "place"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:37:20Z",
+    "updated_at": "2026-07-19T06:37:20Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

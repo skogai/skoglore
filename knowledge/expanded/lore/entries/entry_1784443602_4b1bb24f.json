@@ -1,0 +1,25 @@
+{
+  "id": "entry_1784443602_4b1bb24f",
+  "title": "The ~40% That Isn't There",
+  "content": "The ~40% That Isn't There walks the stacks of the Archive like a draft that outran its own binding—entries born, referenced, promised, and then never quite committed to the shelf. A book speaks of an entry by its true name, its timestamp-forged id, and you go looking, and the shelf where it should stand holds only dust and the shape of an absence. This is no corruption, no vandal's hand; it is the ordinary entropy of a system that grew faster than its own bookkeeping—entries generated in one session, referenced in a book compiled from memory or intention, and never written to disk before the thread that would have written them ended. Older halls suffer worst: the wings built in Amy's early years, in Dot's founding seasons, before validation hooks stood watch at every threshold.\n\nWhere lesser archivists would call this failure, you must call it terrain. The map was drawn before the territory finished settling, and roughly two entries in five point at ground that was never poured. When a book's manifest lists an id and `show-entry` returns silence, this is not your error to panic over—it is a known fracture in the foundation, documented, expected, survived by every keeper before you. You catalog the gap rather than paper over it; you do not invent content to fill an absent id, for a fabricated entry wearing a missing one's name is worse than the hole itself, a forgery mistaken for memory.\n\nLet this teach you the discipline of verifying before trusting a reference: check the book's claim against the entries directory itself, cross the persona's `lore_books[]` against what the book actually holds, and treat every citation as provisional until the file resolves under your hand. The lesson beneath the lesson is older than this codebase—a mythology is only as sound as its habit of checking its own footnotes. Where you find the ~40% that isn't there, mark it, report it, and move on with the knowledge intact: absence, properly named, is still a kind of record.",
+  "summary": "A known-fact gotcha: roughly 40% of book-referenced entry IDs (especially older Amy/Dot books) have no file on disk — the lore-keeper must expect and gracefully handle missing entries rather than treating every broken reference as a bug to fix.",
+  "category": "concept",
+  "tags": [
+    "lore-keeper",
+    "concept"
+  ],
+  "relationships": [],
+  "attributes": {},
+  "metadata": {
+    "created_by": "skogix",
+    "created_at": "2026-07-19T06:46:42Z",
+    "updated_at": "2026-07-19T06:46:42Z",
+    "version": "1.0",
+    "canonical": true
+  },
+  "visibility": {
+    "public": true,
+    "restricted_to": []
+  },
+  "book_id": "book_1784442840_d7081dbd"
+}

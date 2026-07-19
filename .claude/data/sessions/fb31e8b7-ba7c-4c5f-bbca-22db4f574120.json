@@ -1,0 +1,7 @@
+{
+  "session_id": "fb31e8b7-ba7c-4c5f-bbca-22db4f574120",
+  "prompts": [
+    "Analyze this AI agent's role and determine what types of lore entries would be most helpful for it to have in its context. The agent is a lore-keeper with this description: \"A lore-keeper agent that helps with lore-keeper tasks\"\n\nFor each category (character, place, object, event, concept), suggest 0-3 specific lore entries that would be helpful. Format your response exactly like JSON:\n\n{\n  \"character\": [\n    {\"title\": \"Character Name\", \"reason\": \"Brief explanation of relevance\"},\n    ...\n  ],\n  \"place\": [...],\n  \"object\": [...],\n  \"event\": [...],\n  \"concept\": [...]\n}\n\nOnly include categories that are relevant to this agent type."
+  ],
+  "agent_name": "Aurora"
+}
